@@ -1,0 +1,14 @@
+# Obsidian — configuración local del alumno (no debe viajar en el repo)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporales / exports
+*.tmp
+PDF_Export/
