@@ -17,6 +17,19 @@
 > - **Dependencias externas:** rol AD DS operativo desde la Fase 4, instancia EC2 `WindowsServer` (`t3.large`) accesible por RDP o PowerShell remoto
 
 ---
+
+> [!important] 📹 Obligaciones de grabación (LÉEME — es igual en TODAS las fases)
+> Esta práctica se **graba entera con OBS**, de principio a fin. No es un repaso al final: quiero ver **cómo lo haces tú**.
+> 1. **Prepárate primero (sin grabar):** comprueba lo necesario, **léete el procedimiento entero** y **crea la entrada de apuntes de esta fase** en Obsidian: fichero `v3-1-fase-5-gestion-de-identidades-usuarios-y-grupos.md` dentro de `00_Apuntes/Trimestre_N/B5_Windows_Nube/`, con la estructura de la Fase 0.1 y **vacía**. Rellenarla es cosa tuya, después.
+> 2. **Arranca OBS y PRESÉNTATE:** *"Hola, me llamo [Nombre], 2.º SMR, y en este vídeo voy a explicar la Fase 5 de Boochan V3.1 — Gestión de Identidades (Usuarios y Grupos en Active Directory)."* Y **muestra algo que demuestre que eres tú** (tu perfil de GitHub, tu Teams o tu correo `@alu.edu.gva.es`). Di qué vas a hacer.
+> 3. **Graba TODO el procedimiento**, explicando cada paso en voz alta mientras lo haces.
+> 4. **Timestamps SIEMPRE** en la descripción: `00:00 Presentación` + uno por cada paso.
+> 5. **Al terminar:** nombra el vídeo `V3.1 · Fase 5 — Gestión de Identidades (Usuarios y Grupos en Active Directory)`, súbelo a tu playlist de YouTube **`B5_Windows_Nube`** (No listado) y **copia su enlace**.
+> 6. **~8-10 min.** Esta fase es más larga que las de prerrequisitos: ve al grano, pero no te saltes pasos. Si se te va mucho, **pártela en dos vídeos** y ponlos los dos en la entrada.
+> 7. **El enlace del vídeo va DENTRO de tu entrada de apuntes**, en el apartado `Enlace al vídeo explicativo`. Ahí, no en un papel.
+> 8. **La entrega va por la TAREA de Teams.** Abriré una tarea que cubrirá **esta fase y otras**; te llegará notificación con fecha límite.
+
+---
 ### 🎯 ¿Dónde Estamos?
 
 > [!info] Vienes de Fase 4
@@ -171,3 +184,27 @@
 > - [ ] ¿El comando `Get-ADGroupMember Policia` devuelve `user1`?
 > - [ ] ¿El comando `Get-ADGroupMember Bomberos` devuelve `user2`?
 > - [ ] ¿Puedes iniciar sesión (o validar credenciales con `Test-ComputerSecureChannel` / login RDP) como `user1` y `user2` contra el dominio `BOOCHAN.SPACE`?
+
+---
+
+### ✅ Entregables y cierre
+
+> [!abstract] Qué tienes que tener hecho al acabar esta fase
+> | Entregable | Dónde vive | Qué debe contener |
+> | :--- | :--- | :--- |
+> | **Entrada de apuntes** | `00_Apuntes/Trimestre_N/B5_Windows_Nube/v3-1-fase-5-gestion-de-identidades-usuarios-y-grupos.md` | Estructura completa + **respuestas a las Preguntas Críticas y al 🔬 Reto** + **enlace del vídeo** |
+> | **Vídeo** | Playlist `B5_Windows_Nube` (No listado) | Nombrado `V3.1 · Fase 5 — Gestión de Identidades (Usuarios y Grupos en Active Directory)`, con presentación, identidad y timestamps |
+> | **Repositorio** | Tu repo de apuntes en GitHub | La entrada, subida con `git add` → `commit` → `push` |
+>
+> > [!danger] ⚠️ Las respuestas van en la ENTRADA, no en un documento aparte
+> > Las **Preguntas Críticas** y el **🔬 Reto** de más arriba no son decorativos: son la parte de la fase que demuestra que has entendido lo que has hecho, y no solo que has sabido copiar comandos. Se contestan **con tus palabras**, en el apartado `Respuesta a las preguntas` de tu entrada.
+> > Una fase con el procedimiento perfecto y las preguntas en blanco está **incompleta**.
+>
+> > [!info] 🏷️ Por qué el nombre lleva `V3.1` delante
+> > Porque el proyecto Boochan existe en **varias versiones** (VirtualBox, Hyper-V, Azure, AWS…) y algunas comparten bloque y playlist. Sin la etiqueta, la Fase 4 de Azure y la de AWS se llamarían **exactamente igual** y no habría forma de distinguirlas. Con ella, tu carpeta y tu playlist dicen siempre **qué versión hiciste**.
+>
+> > [!success] 🎯 Criterio de éxito
+> > Abro tu repositorio, encuentro la entrada de esta fase, y dentro está: qué has hecho, qué has entendido, qué dudas te han quedado y el enlace al vídeo donde se te ve haciéndolo. Si falta el enlace o faltan las respuestas, la fase **no cuenta como entregada**.
+>
+> > [!tip] 💡 ¿Y si la fase te ha llevado tres clases?
+> > **Una fase, una entrada.** No creas un fichero por día: abres el mismo y sigues escribiendo. Haz `commit` y `push` **al terminar cada sesión**, para no perder nunca más de un día de trabajo.
