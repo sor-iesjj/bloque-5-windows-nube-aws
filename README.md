@@ -15,7 +15,7 @@ Itinerario práctico de **8 fases + auditoría final** en el que construyes una 
 1. Pulsa el botón verde **"Use this template" → "Create a new repository"** para crear **tu propia copia** en tu cuenta de GitHub.
 2. **Clónala** a tu ordenador:
    ```bash
-   git clone https://github.com/TU_USUARIO/boochan-v3.1.git
+   git clone https://github.com/TU_USUARIO/bloque-5-windows-nube-aws.git
    ```
 3. Ábrela en **Obsidian** como bóveda ("Abrir carpeta como almacén") y empieza por **[Manual_BoochanV3.1.md](Manual_BoochanV3.1.md)** — el manual explica el proyecto, las fases y cómo se trabaja.
 4. A medida que avances y hagas cambios, súbelos a **tu** repositorio:
