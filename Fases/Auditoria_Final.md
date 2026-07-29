@@ -34,6 +34,14 @@ Para terminar el proyecto, debemos aplicar la filosofía **Zero Trust** (Confian
 
 ### 🛠️ Procedimiento Práctico de Hardening
 
+> [!example] 🎬 Antes de empezar (todavía SIN grabar, y luego arranca)
+> Ya conoces el método desde los prerrequisitos, así que va solo el recordatorio:
+> 1. **Crea la entrada de apuntes** de esta fase (`v3-1-auditoria-final-hardening-y-cierre-de-seguridad.md`) con su estructura, vacía.
+> 2. **Léete los 5 pasos** del procedimiento enteros, para no atascarte a mitad del vídeo.
+> 3. Ten **OBS** listo y comprueba **pantalla y micrófono**.
+>
+> Cuando lo tengas: **arranca la grabación, preséntate y muestra tu identidad**. A partir de ahí, **todo queda grabado** — incluido cualquier paso previo de preparación que venga a continuación.
+
 > [!example] Paso 1: Cierre de Puertos en el Security Group de AWS
 > Ve a **AWS Console → EC2 → Grupos de seguridad → tu grupo → Editar reglas de entrada** y restringe el **Origen** de las reglas sensibles para aplicar la máxima seguridad. Recuerda que este proyecto **no usa SSH (puerto 22)** — el acceso administrativo es por **RDP (puerto 3389)**:
 >

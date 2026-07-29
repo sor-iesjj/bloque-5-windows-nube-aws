@@ -84,6 +84,14 @@
 
 ### 🛠️ Procedimiento Práctico
 
+> [!example] 🎬 Antes de empezar (todavía SIN grabar, y luego arranca)
+> Ya conoces el método desde los prerrequisitos, así que va solo el recordatorio:
+> 1. **Crea la entrada de apuntes** de esta fase (`v3-1-fase-5-gestion-de-identidades-usuarios-y-grupos.md`) con su estructura, vacía.
+> 2. **Léete los 3 pasos** del procedimiento enteros, para no atascarte a mitad del vídeo.
+> 3. Ten **OBS** listo y comprueba **pantalla y micrófono**.
+>
+> Cuando lo tengas: **arranca la grabación, preséntate y muestra tu identidad**. A partir de ahí, **todo queda grabado** — incluido cualquier paso previo de preparación que venga a continuación.
+
 > [!example] Paso 0: Confirmar que el módulo ActiveDirectory está disponible
 > Al instalar el rol AD DS en la Fase 4, el módulo de PowerShell `ActiveDirectory` queda instalado automáticamente en el propio controlador de dominio. Comprueba que está cargado:
 > ```powershell
