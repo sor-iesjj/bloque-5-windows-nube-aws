@@ -154,7 +154,7 @@ Al terminar esta fase serás capaz de:
 > [!example] 🎬 Antes de empezar (todavía SIN grabar, y luego arranca)
 > Ya conoces el método desde los prerrequisitos, así que va solo el recordatorio:
 > 1. **Crea la entrada de apuntes** de esta fase (`v3-1-fase-1-infraestructura-cloud-aws-ec2-windows-se.md`) con su estructura, vacía.
-> 2. **Léete los 7 pasos** del procedimiento enteros, para no atascarte a mitad del vídeo.
+> 2. **Léete los 8 pasos** del procedimiento enteros, para no atascarte a mitad del vídeo.
 > 3. Ten **OBS** listo y comprueba **pantalla y micrófono**.
 >
 > Cuando lo tengas: **arranca la grabación, preséntate y muestra tu identidad**. A partir de ahí, **todo queda grabado** — incluido cualquier paso previo de preparación que venga a continuación.
@@ -311,6 +311,51 @@ Al terminar esta fase serás capaz de:
 > > ```powershell
 > > Get-NetTCPConnection -State Listen | Sort-Object LocalPort
 > > ```
+
+---
+
+> [!example] 🔌 Paso 8 — EJERCICIO DE VERIFICACIÓN: comprueba tu red desde fuera
+> Hasta aquí has configurado la red **y has confiado en que el panel dice la verdad**. Ahora vas a comprobarlo con fuentes **externas e independientes**, que es como se hace de verdad.
+>
+> > [!info] ¿Qué es una API y por qué la usa un administrador?
+> > Una **API** es una web hecha para que la consulte un programa en vez de una persona: en vez de devolverte una página con colores, te devuelve **datos limpios** en formato JSON.
+> >
+> > ¿Y para qué la quiere un administrador de sistemas? Para **comprobar desde fuera lo que desde dentro no puede ver**. Tu servidor te dirá siempre lo que él cree de sí mismo; un servicio externo te dice **lo que se ve realmente**. Y esa diferencia, cuando aparece, es justo donde está el problema que llevas dos horas buscando.
+> >
+> > Se consultan con **`curl`**, que ya has usado y que viene instalado en todas partes. Sin programar y sin instalar nada.
+>
+> **a) Verifica tu cálculo de subred.** Tu red es **`10.0.0.0/24`** (la VPC de AWS).
+> Primero, **a mano y sin ayuda**, escribe en tu entrada de apuntes: máscara decimal, dirección de red, broadcast, número de hosts asignables, primero y último.
+> Ahora compruébalo:
+> ```bash
+> curl "https://networkcalc.com/api/ip/10.0.0.0/24"
+> ```
+> Si no coincide, **no borres tu respuesta**: déjala y explica en el vídeo dónde te equivocaste. Eso enseña más que acertar.
+>
+> **b) Tu servidor SÍ tiene IP pública. Averigua de quién es.** Desde dentro del servidor:
+> ```bash
+> curl "https://api.ipify.org?format=json"
+> ```
+> Compárala con la que te muestra el panel de AWS: **tienen que coincidir**.
+>
+> Ahora pregunta **quién es el dueño de esa IP**:
+> ```bash
+> curl "http://ip-api.com/json/TU_IP_PUBLICA?fields=query,country,isp,org,as"
+> ```
+>
+> > [!success] 🤔 Mira bien la respuesta
+> > No sale tu nombre: sale **Amazon**, con su número de **AS** y el país del centro de datos.
+> > **Eso es "estar en la nube"**, dicho con datos: tu servidor vive dentro de la infraestructura de Amazon, y para el resto de Internet es una máquina más de las suyas.
+> > **Explica en el vídeo:** ¿en qué país está físicamente tu servidor? ¿Coincide con el que elegiste al crearlo?
+>
+> > [!question] Lo que va a tu entrada de apuntes
+> > 1. ¿Coincidió tu cálculo de subred con el de la API? Si no, ¿en qué fallaste?
+> > 2. ¿Cuál es la IP privada de tu servidor y cuál la pública? ¿Por qué no son la misma?
+> > 3. ¿Por qué una comprobación hecha **desde el propio servidor** vale menos que una hecha desde fuera?
+>
+> > [!note] 📌 Para saber más
+> > La teoría completa de esto está en la práctica **B1.9b — Verificar tu red con APIs públicas** del Bloque 1. Aquí lo aplicas a tu servidor de verdad.
+> > Y una consecuencia que conviene que asumas ya: **tu servidor es alcanzable desde cualquier punto del planeta.** En cuanto lo enciendes empieza a recibir intentos de conexión de desconocidos. Por eso las siguientes fases dedican tanto tiempo al cortafuegos y a la VPN.
 
 ---
 
