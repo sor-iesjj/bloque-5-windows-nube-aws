@@ -87,7 +87,7 @@
 > [!example] 🎬 Antes de empezar (todavía SIN grabar, y luego arranca)
 > Ya conoces el método desde los prerrequisitos, así que va solo el recordatorio:
 > 1. **Crea la entrada de apuntes** de esta fase (`v3-1-fase-3-conectividad-vpn-wireguard-para-windows.md`) con su estructura, vacía.
-> 2. **Léete los 4 pasos** del procedimiento enteros, para no atascarte a mitad del vídeo.
+> 2. **Léete los 5 pasos** del procedimiento enteros, para no atascarte a mitad del vídeo.
 > 3. Ten **OBS** listo y comprueba **pantalla y micrófono**.
 >
 > Cuando lo tengas: **arranca la grabación, preséntate y muestra tu identidad**. A partir de ahí, **todo queda grabado** — incluido cualquier paso previo de preparación que venga a continuación.
@@ -270,6 +270,61 @@
 > > ```
 > > mstsc /v:10.0.0.1
 > > ```
+
+---
+
+> [!example] 🔌 Paso 5 — EJERCICIO DE VERIFICACIÓN: qué hace de verdad tu VPN
+> Tienes el túnel levantado y `wg show` dice que hay tráfico. Bien. Pero **¿sabes qué hace exactamente esa VPN, y sobre todo qué NO hace?** Vamos a comprobarlo con fuentes externas.
+>
+> > [!info] Recordatorio: por qué usamos APIs
+> > Una **API** es una web hecha para que la consulte un programa: devuelve **datos limpios** en JSON en vez de una página. Un administrador las usa para **comprobar desde fuera lo que desde dentro no puede ver**. La teoría completa está en la práctica **B1.9b** del Bloque 1.
+>
+> **a) La red del túnel.** Tu túnel es **`10.0.0.0/24`**. Antes de mirar nada, escribe en tu entrada de apuntes cuántos clientes VPN caben en él. Ahora compruébalo:
+> ```bash
+> curl "https://networkcalc.com/api/ip/10.0.0.0/24"
+> ```
+>
+> **b) Y ahora la pregunta buena: ¿por qué el cliente lleva `/32`?**
+> Fíjate en tu configuración: el servidor tiene `Address = 10.0.0.1/24` pero el cliente tiene `Address = 10.0.0.2/32`. **No es un error.** Míralo:
+> ```bash
+> curl "https://networkcalc.com/api/ip/10.0.0.2/32"
+> ```
+> ```json
+> "subnet_mask": "255.255.255.255",   "network_address": "10.0.0.2",
+> "broadcast_address": "10.0.0.2",       "assignable_hosts": 0
+> ```
+>
+> > [!success] 🤔 Léelo y explícalo en el vídeo
+> > Una máscara `/32` significa **una sola dirección**: red, broadcast y host son la misma. **Cero hosts asignables.**
+> > Traducido: *"yo soy exactamente esta IP y ninguna más"*. Por eso WireGuard usa `/32` en los clientes — cada uno declara **su** dirección exacta, y el servidor sabe sin ambigüedad a quién enviar cada paquete. Si pusieras `/24` en el cliente, estarías diciendo *"yo soy toda la red"*, y el enrutado se rompería.
+>
+> **c) El experimento que desmonta un mito.** Tu servidor está en la nube y **sí tiene IP pública propia**. Aun así, el resultado de abajo es el mismo: el túnel no cambia por dónde sales tú a Internet.
+>
+> 1. Con la VPN **desconectada**, en el cliente:
+>    ```bash
+>    curl "https://api.ipify.org?format=json"
+>    ```
+>    Anota la IP.
+> 2. **Conecta el túnel** y comprueba que funciona: `ping 10.0.0.1`
+> 3. Con la VPN **conectada**, repite exactamente el mismo comando.
+>
+> > [!danger] 🤯 Sale la MISMA IP. Y está bien.
+> > Casi todo el mundo cree que "conectarse a una VPN" cambia tu IP pública — es lo que venden los anuncios de NordVPN y compañía. **Tu VPN no hace eso, y es a propósito.**
+> >
+> > Mira tu configuración: `AllowedIPs = 10.0.0.0/24`. Le has dicho al cliente: *"manda por el túnel **solo** lo que vaya a esa red"*. Todo lo demás —YouTube, Google, ipify— **sigue saliendo por tu conexión normal**. Eso se llama **split tunnel** (túnel partido).
+> >
+> > | | Qué manda por el túnel | Tu IP pública |
+> > | :--- | :--- | :--- |
+> > | **Split tunnel** (`AllowedIPs = 10.0.0.0/24`) ← el tuyo | Solo el tráfico hacia el servidor | **No cambia** |
+> > | **Full tunnel** (`AllowedIPs = 0.0.0.0/0`) | **Todo** tu tráfico de Internet | Sí: sale la del servidor |
+> >
+> > **¿Y por qué split y no full?** Porque tu VPN existe para **llegar a tu servidor de forma segura**, no para ocultarte. Si mandaras todo el tráfico por el túnel, cargarías tu servidor con el YouTube de todos los clientes, y si el túnel cae te quedas sin Internet. Un administrador elige *split* salvo que tenga una razón concreta para lo contrario.
+>
+> > [!question] Lo que va a tu entrada de apuntes
+> > 1. ¿Cuántos clientes VPN caben en tu túnel? ¿Coincidió con tu cálculo?
+> > 2. ¿Por qué el cliente lleva `/32` y el servidor `/24`? Explícalo con lo que devolvió la API.
+> > 3. Tu IP pública **no cambió** al conectar la VPN. **¿Por qué?** ¿Qué habría que cambiar en la configuración para que sí cambiara?
+> > 4. Un compañero dice: *"si uso VPN nadie sabe lo que hago en Internet"*. Con lo que acabas de comprobar, **¿tiene razón?**
 
 ---
 
