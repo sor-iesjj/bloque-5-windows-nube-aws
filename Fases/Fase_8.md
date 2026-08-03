@@ -141,13 +141,13 @@
 > ```powershell
 > Add-Computer -DomainName "BOOCHAN.SPACE" -Credential BOOCHAN\Administrator -Restart
 > ```
-> Te pedirá la contraseña del `Administrator` del dominio (`P@ssword2026!`) en una ventana emergente. Al confirmarla, el PC se une al dominio y se reinicia automáticamente.
+> Te pedirá la contraseña del `Administrator` del dominio (`P@ssw0rd`) en una ventana emergente. Al confirmarla, el PC se une al dominio y se reinicia automáticamente.
 >
 > **Opción B — Interfaz gráfica:**
 > 1. Abre **Configuración** (tecla `Windows + I`).
 > 2. Ve a **Sistema** → **Acerca de** → **"Cambiar nombre de este PC (avanzado)"** → pestaña **"Nombre de equipo"** → botón **"Cambiar..."**.
 > 3. Selecciona **"Dominio"** e introduce: `BOOCHAN.SPACE`
-> 4. Pulsa **Aceptar**. Te pedirá credenciales: introduce `Administrator` y `P@ssword2026!`.
+> 4. Pulsa **Aceptar**. Te pedirá credenciales: introduce `Administrator` y `P@ssw0rd`.
 > 5. Si aparece el mensaje **"Bienvenido al dominio BOOCHAN"**, el proceso ha sido correcto.
 > 6. **Reinicia el equipo** cuando te lo pida. Este paso es obligatorio.
 >
@@ -161,7 +161,7 @@
 > En la pantalla de inicio de sesión de Windows, introduce las credenciales del usuario del dominio. Fíjate en el formato correcto:
 >
 > - **Usuario:** `BOOCHAN\user1`  *(el nombre NetBIOS del dominio, una barra invertida `\`, y el nombre de usuario)*
-> - **Contraseña:** `P@ssword2026!`
+> - **Contraseña:** `P@ssw0rd`
 >
 > > [!warning] ⚠️ La barra invertida `\`, no la barra normal `/`
 > > La barra invertida se escribe con la tecla que tiene el símbolo `\` en tu teclado (normalmente junto al `Intro` o junto al `0`). Si usas la barra normal `/`, no funcionará.

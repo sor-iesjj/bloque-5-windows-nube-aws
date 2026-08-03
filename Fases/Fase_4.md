@@ -157,7 +157,7 @@
 >   -DomainMode "Win2025" `
 >   -ForestMode "Win2025" `
 >   -InstallDNS `
->   -SafeModeAdministratorPassword (ConvertTo-SecureString "P@ssword2026!" -AsPlainText -Force) `
+>   -SafeModeAdministratorPassword (ConvertTo-SecureString "P@ssw0rd" -AsPlainText -Force) `
 >   -Force
 > ```
 >

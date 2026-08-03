@@ -139,7 +139,7 @@
 > Creamos dos usuarios: `user1` pertenecerá al grupo `Policia` y `user2` al grupo `Bomberos`. Esto nos permitirá demostrar en la Fase 7 que cada uno ve carpetas diferentes:
 > ```powershell
 > # Contraseña común para el proyecto (cumple la política de complejidad de AD)
-> $securePass = ConvertTo-SecureString "P@ssword2026!" -AsPlainText -Force
+> $securePass = ConvertTo-SecureString "P@ssw0rd" -AsPlainText -Force
 >
 > # Creamos user1 en la OU de Policia
 > New-ADUser -Name "user1" -SamAccountName "user1" `
@@ -169,7 +169,7 @@
 > | Problema | Causa Probable | Solución Sugerida |
 > | :--- | :--- | :--- |
 > | `Get-ADUser user1` devuelve error "Cannot find an object". | El usuario no se creó correctamente o hay un error tipográfico en el `-Path`. | Ejecuta `Get-ADUser -Filter *` para listar todos los usuarios del dominio y localizar errores de nombre o de OU. |
-> | Error: "The password does not meet the length, complexity, or history requirement". | La política de contraseñas de dominio exige complejidad. | Usa una contraseña con mayúsculas, minúsculas, números y símbolos como `P@ssword2026!`. |
+> | Error: "The password does not meet the length, complexity, or history requirement". | La política de contraseñas de dominio exige complejidad. | Usa una contraseña con mayúsculas, minúsculas, números y símbolos como `P@ssw0rd`. |
 > | Error: "An attempt was made to add an object to the directory with a name that is already in use". | El usuario o grupo ya existía de un intento anterior. | Ejecuta `Remove-ADUser user1 -Confirm:$false` o `Remove-ADGroup Policia -Confirm:$false` y vuelve a crearlo. |
 > | Error: "Insufficient access rights to perform the operation". | La PowerShell no se está ejecutando como Administrador de dominio. | Abre PowerShell con "Ejecutar como administrador" y confirma que tu sesión tiene privilegios de Admins. del dominio. |
 > | `New-ADOrganizationalUnit` falla con "already exists". | La OU ya existe de una ejecución anterior. | Comprueba con `Get-ADOrganizationalUnit -Filter 'Name -eq "Departamentos"'` antes de recrearla, o continúa sin crearla de nuevo. |

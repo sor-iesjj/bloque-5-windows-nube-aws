@@ -340,7 +340,7 @@ Estos problemas pueden aparecer en cualquier fase porque son de la capa cloud, n
 > Al crear un usuario con `New-ADUser` con una contraseña que no cumple la política de complejidad de AD.
 
 > [!info] ¿Hay que preocuparse?
-> No. Usa una contraseña con mayúsculas, minúsculas, números y símbolos, como `P@ssword2026!`.
+> No. Usa una contraseña con mayúsculas, minúsculas, números y símbolos, como `P@ssw0rd`.
 
 ---
 

@@ -84,7 +84,7 @@ Esta enciclopedia de bolsillo te servirá para entender "qué estás escribiendo
 > ```powershell
 > Install-ADDSForest -DomainName "BOOCHAN.SPACE" -DomainNetbiosName "BOOCHAN" `
 >   -DomainMode "Win2025" -ForestMode "Win2025" -InstallDNS `
->   -SafeModeAdministratorPassword (ConvertTo-SecureString "P@ssword2026!" -AsPlainText -Force) -Force
+>   -SafeModeAdministratorPassword (ConvertTo-SecureString "P@ssw0rd" -AsPlainText -Force) -Force
 > ```
 > El servidor se reinicia automáticamente al finalizar (5-10 minutos en total). `-SafeModeAdministratorPassword` es la contraseña del modo de recuperación DSRM, **distinta** de la contraseña del Administrador del dominio.
 
