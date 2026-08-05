@@ -83,7 +83,6 @@
 > [Interface]
 > PrivateKey = <SE_RELLENA_AUTOMÁTICAMENTE_por_WireGuard>
 > Address = 10.0.0.2/32
-> DNS = 10.0.0.1
 >
 > [Peer]
 > PublicKey = <LLAVE_PÚBLICA_DEL_SERVIDOR_del_Paso_1>
@@ -92,6 +91,17 @@
 > PersistentKeepalive = 25
 > ```
 >
+
+> > [!danger] 🛑 Aquí NO va todavía una línea `DNS`
+> > Verás en muchos manuales una línea `DNS = 10.0.0.1` dentro de `[Interface]`. **Ahora sería un error.**
+> >
+> > Esa línea le dice al cliente: *"mientras el túnel esté activo, pregunta los nombres al servidor"*. Tiene sentido **a partir de la Fase 4**, cuando el controlador de dominio levante su DNS interno.
+> >
+> > **Pero hoy, en `10.0.0.1` no hay ningún servidor DNS.** Si la pones y activas el túnel, las consultas se irán a un sitio donde no contesta nadie: **dejarás de navegar mientras la VPN esté conectada**. El síntoma despista — *"activo la VPN y se me cae internet"* — porque nada apunta al fichero que lo causó.
+> >
+> > La línea se añade en la **Fase 8**, cuando el cliente tenga que resolver nombres del dominio.
+> > Detalle: [[Fase_3.7_Resolucion_Problemas]].
+
 > > [!important] 💡 ¿Qué es `PersistentKeepalive`?
 > > AWS cierra las conexiones que están inactivas. Este parámetro hace que el cliente envíe un pequeño "pulso" cada 25 segundos para mantener el túnel vivo aunque no haya tráfico real. Sin esta línea, la VPN se desconectaría sola a los pocos minutos.
 
