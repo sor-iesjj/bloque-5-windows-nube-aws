@@ -91,7 +91,7 @@
 > PersistentKeepalive = 25
 > ```
 >
-
+>
 > > [!danger] 🛑 Aquí NO va todavía una línea `DNS`
 > > Verás en muchos manuales una línea `DNS = 10.0.0.1` dentro de `[Interface]`. **Ahora sería un error.**
 > >
@@ -101,7 +101,7 @@
 > >
 > > La línea se añade en la **Fase 8**, cuando el cliente tenga que resolver nombres del dominio.
 > > Detalle: [[Fase_3.7_Resolucion_Problemas]].
-
+>
 > > [!important] 💡 ¿Qué es `PersistentKeepalive`?
 > > AWS cierra las conexiones que están inactivas. Este parámetro hace que el cliente envíe un pequeño "pulso" cada 25 segundos para mantener el túnel vivo aunque no haya tráfico real. Sin esta línea, la VPN se desconectaría sola a los pocos minutos.
 
