@@ -12,7 +12,7 @@
 >
 > | Entregable | Dónde vive | Qué debe contener |
 > | :--- | :--- | :--- |
-> | **Entrada de apuntes** | `v3-1-fase-1-infraestructura-cloud-aws-ec2-windows-se.md` | El procedimiento con tus palabras + **respuestas a las preguntas** + **enlace del vídeo** |
+> | **Entrada de apuntes** | `b5-aws-1-infraestructura-cloud-aws-ec2-windows.md` | El procedimiento con tus palabras + **respuestas a las preguntas** + **enlace del vídeo** |
 > | **Vídeo** | Playlist (No listado) | `V3.1 · Fase 1 — Infraestructura Cloud (AWS EC2 — Windows Server 2025)`, con presentación, identidad y timestamps |
 > | **Repositorio** | Tu repo de apuntes en GitHub | La entrada, con `git add` → `commit` → `push` |
 > | **💾 Punto de control** | Instantánea | Nombrada **`Fase 1 terminada`**, tomada **durante la grabación** |

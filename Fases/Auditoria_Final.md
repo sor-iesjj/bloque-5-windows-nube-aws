@@ -21,7 +21,7 @@ Para terminar el proyecto, debemos aplicar la filosofía **Zero Trust** (Confian
 
 > [!important] 📹 Obligaciones de grabación (LÉEME — es igual en TODAS las fases)
 > Esta práctica se **graba entera con OBS**, de principio a fin. No es un repaso al final: quiero ver **cómo lo haces tú**.
-> 1. **Prepárate primero (sin grabar):** comprueba lo necesario, **léete el procedimiento entero** y **crea la entrada de apuntes de esta fase** en Obsidian: fichero `v3-1-auditoria-final-hardening-y-cierre-de-seguridad.md` dentro de `00_Apuntes/Trimestre_N/B5_Windows_Nube/`, con la estructura del **Bloque 0 · Fase 0.1.b** y **vacía**. Rellenarla es cosa tuya, después.
+> 1. **Prepárate primero (sin grabar):** comprueba lo necesario, **léete el procedimiento entero** y **crea la entrada de apuntes de esta fase** en Obsidian: fichero `b5-aws-auditoria-final-hardening-y-cierre-de-seguridad.md` dentro de `00_Apuntes/Trimestre_N/B5_Windows_Nube/`, con la estructura del **Bloque 0 · Fase 0.1.b** y **vacía**. Rellenarla es cosa tuya, después.
 > 2. **Arranca OBS y PRESÉNTATE:** *"Hola, me llamo [Nombre], 2.º SMR, y en este vídeo voy a explicar la Auditoría Final de Boochan V3.1 — Hardening y cierre de seguridad."* Y **muestra algo que demuestre que eres tú** (tu perfil de GitHub, tu Teams o tu correo `@alu.edu.gva.es`). Di qué vas a hacer.
 > 3. **Graba TODO el procedimiento**, explicando cada paso en voz alta mientras lo haces.
 > 4. **Timestamps SIEMPRE** en la descripción: `00:00 Presentación` + uno por cada paso.
@@ -36,7 +36,7 @@ Para terminar el proyecto, debemos aplicar la filosofía **Zero Trust** (Confian
 
 > [!example] 🎬 Antes de empezar (todavía SIN grabar, y luego arranca)
 > Ya conoces el método desde los prerrequisitos, así que va solo el recordatorio:
-> 1. **Crea la entrada de apuntes** de esta fase (`v3-1-auditoria-final-hardening-y-cierre-de-seguridad.md`) con su estructura, vacía.
+> 1. **Crea la entrada de apuntes** de esta fase (`b5-aws-auditoria-final-hardening-y-cierre-de-seguridad.md`) con su estructura, vacía.
 > 2. **Léete los 5 pasos** del procedimiento enteros, para no atascarte a mitad del vídeo.
 > 3. Ten **OBS** listo y comprueba **pantalla y micrófono**.
 >
@@ -169,7 +169,7 @@ Para terminar el proyecto, debemos aplicar la filosofía **Zero Trust** (Confian
 > [!abstract] Qué tienes que tener hecho al acabar esta fase
 > | Entregable | Dónde vive | Qué debe contener |
 > | :--- | :--- | :--- |
-> | **Entrada de apuntes** | `00_Apuntes/Trimestre_N/B5_Windows_Nube/v3-1-auditoria-final-hardening-y-cierre-de-seguridad.md` | Estructura completa + **respuestas a las Preguntas Críticas y al 🔬 Reto** + **enlace del vídeo** |
+> | **Entrada de apuntes** | `00_Apuntes/Trimestre_N/B5_Windows_Nube/b5-aws-auditoria-final-hardening-y-cierre-de-seguridad.md` | Estructura completa + **respuestas a las Preguntas Críticas y al 🔬 Reto** + **enlace del vídeo** |
 > | **Vídeo** | Playlist `B5_Windows_Nube` (No listado) | Nombrado `V3.1 · Auditoría Final — Hardening y cierre de seguridad`, con presentación, identidad y timestamps |
 > | **Repositorio** | Tu repo de apuntes en GitHub | La entrada, subida con `git add` → `commit` → `push` |
 >

@@ -23,7 +23,7 @@
 
 > [!example] 🎬 Antes de empezar (todavía SIN grabar, y luego arranca)
 > Ya conoces el método desde los prerrequisitos, así que va solo el recordatorio:
-> 1. **Crea la entrada de apuntes** de esta fase (`v3-1-fase-1-infraestructura-cloud-aws-ec2-windows-se.md`) con su estructura, vacía.
+> 1. **Crea la entrada de apuntes** de esta fase (`b5-aws-1-infraestructura-cloud-aws-ec2-windows.md`) con su estructura, vacía.
 > 2. **Léete los 8 pasos** del procedimiento enteros, para no atascarte a mitad del vídeo.
 > 3. Ten **OBS** listo y comprueba **pantalla y micrófono**.
 >
