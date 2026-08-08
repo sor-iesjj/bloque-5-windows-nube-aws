@@ -9,7 +9,7 @@
 
 > [!important] 📹 Obligaciones de grabación (LÉEME — es igual en TODAS las fases)
 > Esta práctica se **graba entera con OBS**, de principio a fin. No es un repaso al final: quiero ver **cómo lo haces tú**.
-> 1. **Prepárate primero (sin grabar):** comprueba lo necesario, **léete el procedimiento entero** y **crea la entrada de apuntes de esta fase** en Obsidian: fichero `v3-1-fase-3-conectividad-vpn-wireguard-para-windows.md` dentro de `00_Apuntes/Trimestre_N/B5_Windows_Nube/`, con la estructura de la Fase 0.1 y **vacía**. Rellenarla es cosa tuya, después.
+> 1. **Prepárate primero (sin grabar):** comprueba lo necesario, **léete el procedimiento entero** y **crea la entrada de apuntes de esta fase** en Obsidian: fichero `v3-1-fase-3-conectividad-vpn-wireguard-para-windows.md` dentro de `00_Apuntes/Trimestre_N/B5_Windows_Nube/`, con la estructura del **Bloque 0 · Fase 0.1.b** y **vacía**. Rellenarla es cosa tuya, después.
 > 2. **Arranca OBS y PRESÉNTATE:** *"Hola, me llamo [Nombre], 2.º SMR, y en este vídeo voy a explicar la Fase 3 de Boochan V3.1 — Conectividad VPN (WireGuard para Windows)."* Y **muestra algo que demuestre que eres tú** (tu perfil de GitHub, tu Teams o tu correo `@alu.edu.gva.es`). Di qué vas a hacer.
 > 3. **Graba TODO el procedimiento**, explicando cada paso en voz alta mientras lo haces.
 > 4. **Timestamps SIEMPRE** en la descripción: `00:00 Presentación` + uno por cada paso.
