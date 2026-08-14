@@ -16,7 +16,7 @@
 > 5. **Al terminar:** nombra el vídeo `V3.1 · Fase 1 — Infraestructura Cloud (AWS EC2 — Windows Server 2025)`, súbelo a tu playlist de YouTube **`B5_Windows_Nube`** (No listado) y **copia su enlace**.
 > 6. **~8-10 min.** Esta fase es más larga que las de prerrequisitos: ve al grano, pero no te saltes pasos. Si se te va mucho, **pártela en dos vídeos** y ponlos los dos en la entrada.
 > 7. **El enlace del vídeo va DENTRO de tu entrada de apuntes**, en el apartado `Enlace al vídeo explicativo`. Ahí, no en un papel.
-> 8. **La entrega va por la TAREA de Teams.** Abriré una tarea que cubrirá **esta fase y otras**; te llegará notificación con fecha límite.
+> 8. **La entrega va por la TAREA de Teams.** Abriré una tarea que cubrirá **esta fase y otras**; te llegará notificación con fecha límite. Ahí pegas **solo tres enlaces**: tu repositorio de **apuntes**, tu repositorio de la **práctica** y tu **playlist** `B5_Windows_Nube`. **Los enlaces de vídeo no se pegan aquí:** cada uno ya está dentro de su entrada de apuntes.
 
 ---
 
